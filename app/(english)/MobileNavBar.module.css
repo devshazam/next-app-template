@@ -1,0 +1,22 @@
+.control{
+	display: block;
+	padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
+	border-radius: var(--mantine-radius-md);
+	font-weight: 500;
+
+	@mixin hover {
+	background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+	}
+}
+
+.texter{
+	color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+	font-size: rem(24px);
+	font-weight: 500;
+	letter-spacing: rem(-2px);
+   
+	@media (max-width: var(--mantine-breakpoint-md)) {
+	  font-size: rem(20px);
+	}
+   }
+   
