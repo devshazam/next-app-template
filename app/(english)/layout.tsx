@@ -4,6 +4,7 @@ import { AppShell, Burger, Group, UnstyledButton, Container, Avatar, Tooltip, Te
 import { useDisclosure } from '@mantine/hooks';
 import classes from './MobileNavbar.module.css';
 import { ColorSchemeToggle } from '@/components/ColorSchemeToggle/ColorSchemeToggle';
+import { MainMenu } from './components/MainMenu';
 
 
 export default function RootLayout({ children }: { children: any }) {
@@ -29,14 +30,15 @@ export default function RootLayout({ children }: { children: any }) {
 				{/* <MantineLogo size={30} /> */}
 					<Group gap="sm" justify="space-between">
 						<Avatar src="/logo.webp" alt="it's me"  size="md" />
-						<Text  size="xl" fw={700}>SitesAi</Text>
+						<Text  size="xl" fw={700}>AppAi</Text>
 					</Group>
 
 					<Group ml="xl" gap={0} visibleFrom="sm">
-						<UnstyledButton className={classes.control}>Home</UnstyledButton>
-						<UnstyledButton className={classes.control}>Blog</UnstyledButton>
-						<UnstyledButton className={classes.control}>Contacts</UnstyledButton>
-						<UnstyledButton className={classes.control}>Support</UnstyledButton>
+						<MainMenu />
+						{/* <UnstyledButton className={classes.control}>Сайты</UnstyledButton>
+						<UnstyledButton className={classes.control}>App</UnstyledButton>
+						<UnstyledButton className={classes.control}>Бизнесу</UnstyledButton>
+						<UnstyledButton className={classes.control}>Контакты</UnstyledButton> */}
 					</Group>
 					<Group ml="xl" gap={8} >
 						<ColorSchemeToggle />

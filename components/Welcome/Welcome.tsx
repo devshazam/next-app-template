@@ -10,16 +10,19 @@ export function Welcome() {
 
 
       <Title className={classes.title} ta="center" mt={60}>
-	 <Text inherit variant="gradient" component="span" gradient={{ from: 'blue', to: 'cyan', deg: 90 }}>AI</Text> site development{' '}<br/>
+	 <Text inherit variant="gradient" component="span" gradient={{ from: 'blue', to: 'cyan', deg: 90 }}>Ai</Text>{'  '}
+	 разработка сайтов
+	 
+	 <br/>
         <Text inherit variant="gradient" component="span" gradient={{ from: 'blue', to: 'cyan', deg: 90 }}>
 	   <TypeAnimation
 			sequence={[
 			// Same substring at the start will only be typed out once, initially
-			'twice cheaper',
+			'профессионально',
 			1000, // wait 1s before replacing "Mice" with "Hamsters"
-			'automation',
+			'надежно',
 			1000,
-			'any difficulty',
+			'без рисков',
 			1000,
 			]}
 			wrapper="span"
