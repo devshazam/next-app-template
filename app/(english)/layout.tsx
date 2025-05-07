@@ -4,7 +4,10 @@ import { AppShell, Burger, Group, UnstyledButton, Container, Avatar, Tooltip, Te
 import { useDisclosure } from '@mantine/hooks';
 import classes from './MobileNavbar.module.css';
 import { ColorSchemeToggle } from '@/components/ColorSchemeToggle/ColorSchemeToggle';
-import { MainMenu } from './components/MainMenu';
+
+import { AppButton  } from '@/components/Menu/AppButton';
+import { SiteButton } from '@/components/Menu/SiteButton';
+import { BusinessButton } from '@/components/Menu/BusinessButton';
 
 
 export default function RootLayout({ children }: { children: any }) {
@@ -18,7 +21,7 @@ export default function RootLayout({ children }: { children: any }) {
      //  transitionTimingFunction="ease"
 		header={{ height: 60, }}
 		// navbar={{ width: 300, breakpoint: 'sm', collapsed: { desktop: true, mobile: !opened } }}
-		footer={{ height: 60 }}
+		// footer={{ height: 60 }}
 		padding="md"
    >
 
@@ -28,17 +31,16 @@ export default function RootLayout({ children }: { children: any }) {
 				{/* <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" /> */}
 				<Group justify="space-between" style={{ flex: 1 }}>
 				{/* <MantineLogo size={30} /> */}
-					<Group gap="sm" justify="space-between">
-						<Avatar src="/logo.webp" alt="it's me"  size="md" />
-						<Text  size="xl" fw={700}>AppAi</Text>
+					<Group gap="xs" justify="space-between">
+						<Avatar src="/logo.webp" alt="it's me"  size="md" component="a" href="/"/>
+						<Text  size="xl" fw={600}  component="a" href="/">AiDev</Text>
 					</Group>
 
-					<Group ml="xl" gap={0} visibleFrom="sm">
-						<MainMenu />
-						{/* <UnstyledButton className={classes.control}>Сайты</UnstyledButton>
-						<UnstyledButton className={classes.control}>App</UnstyledButton>
-						<UnstyledButton className={classes.control}>Бизнесу</UnstyledButton>
-						<UnstyledButton className={classes.control}>Контакты</UnstyledButton> */}
+					<Group ml="xl" gap={8} visibleFrom="sm">
+						<SiteButton />
+						<AppButton />
+						<BusinessButton />
+						<UnstyledButton className={classes.control}>Контакты</UnstyledButton> 
 					</Group>
 					<Group ml="xl" gap={8} >
 						<ColorSchemeToggle />
@@ -55,11 +57,12 @@ export default function RootLayout({ children }: { children: any }) {
 				</Group>
 			</Group>
 			<Group gap={0}  hiddenFrom="sm"  justify="space-between">
-						<UnstyledButton className={classes.control}>Home</UnstyledButton>
-						<UnstyledButton className={classes.control}>Blog</UnstyledButton>
-						<UnstyledButton className={classes.control}>Contacts</UnstyledButton>
-						<UnstyledButton className={classes.control}>Support</UnstyledButton>
-					</Group>
+
+				<SiteButton />
+				<AppButton />
+				<BusinessButton />
+				<UnstyledButton className={classes.control}>Контакты</UnstyledButton> 
+			</Group>
 	   </Container>
       </AppShell.Header>
 
@@ -76,11 +79,11 @@ export default function RootLayout({ children }: { children: any }) {
 		</Container>
 	</AppShell.Main>
 
-	<AppShell.Footer p="md" zIndex={-100}>
+	{/* <AppShell.Footer p="md" zIndex={-100}>
 		<Container>
 			Footerv odfgijpoijiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
 		</Container>
-	</AppShell.Footer>
+	</AppShell.Footer> */}
 
    </AppShell>
   );

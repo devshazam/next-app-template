@@ -18,11 +18,11 @@ export function Welcome() {
 	   <TypeAnimation
 			sequence={[
 			// Same substring at the start will only be typed out once, initially
-			'профессионально',
+			'экспертно',
 			1000, // wait 1s before replacing "Mice" with "Hamsters"
-			'надежно',
+			'актуально',
 			1000,
-			'без рисков',
+			'стабильно',
 			1000,
 			]}
 			wrapper="span"
@@ -33,13 +33,15 @@ export function Welcome() {
         </Text>
       </Title>
       <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
-        This starter Next.js project includes a minimal setup for server side rendering, if you want
-        to learn more on Mantine + Next.js integration follow{' '}
+        AI Development это {' '}
         <Anchor href="https://mantine.dev/guides/next/" size="lg">
           this guide
         </Anchor>
         . To get started edit page.tsx file.
       </Text>
+
+
+
       <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
         This starter Next.js project includes a minimal setup for server side rendering, if you want
         to learn more on Mantine + Next.js integration follow{' '}
